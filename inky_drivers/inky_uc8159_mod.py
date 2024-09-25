@@ -270,7 +270,9 @@ class Inky:
         GPIO.OctaveGPIO.output(self.reset_pin, GPIO.HIGH)
         time.sleep(0.1)
 
-        self._busy_wait(1.0)
+        adapter_busy_pin(
+            timeout=1, start_time=time.time(), last_change_time=time.time() * 1000
+        )  # seconds
 
         # Resolution Setting
         # 10bit horizontal followed by a 10bit vertical resolution

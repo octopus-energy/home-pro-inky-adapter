@@ -1,7 +1,6 @@
 import octave_tools.Octave_GPIO as GPIO
 import time
 import warnings
-from datetime import timedelta
 
 
 def adapter_busy_pin(
@@ -16,8 +15,8 @@ def adapter_busy_pin(
     If the pin is high initially, wait for the timeout period.
     Otherwise, poll the pin for a rising edge (low to high transition).
     """
-    poll_interval_ms = timedelta(milliseconds=5)
-    debounce_time_ms = timedelta(milliseconds=10)
+    poll_interval_ms = 5
+    debounce_time_ms = 10
     last_state = GPIO.OctaveGPIO.input(busy_pin)
     stable_state = last_state
 
@@ -26,11 +25,11 @@ def adapter_busy_pin(
         warnings.warn(
             f"Busy Wait: Held high. Waiting for {timeout:0.2f}s", stacklevel=1
         )
-        time.sleep(timedelta(seconds=timeout))
+        time.sleep(timeout)
         return
 
     # Polling loop to detect the rising edge or timeout
-    while timedelta(seconds=time.time() - start_time) < timedelta(seconds=timeout):
+    while (time.time() - start_time) < timeout:
         current_state = GPIO.OctaveGPIO.input(busy_pin)
         current_time = time.time() * 1000  # Current time in milliseconds
 
