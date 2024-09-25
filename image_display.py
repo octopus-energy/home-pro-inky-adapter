@@ -36,6 +36,3 @@ except TypeError:
     inky.set_image(resizedimage)
 
 inky.show()
-
-
-inky.show()
