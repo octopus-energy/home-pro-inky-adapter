@@ -14,11 +14,11 @@ def pull_agile():
 
     import_endpt = (
         "/v1/products/AGILE-24-04-03/"
-        "electricity-tariffs/E-1R-AGILE-24-04-03-A/standard-unit-rates/"
+        "electricity-tariffs/E-1R-AGILE-24-04-03-H/standard-unit-rates/"
     )
     export_endpt = (
         "/v1/products/AGILE-OUTGOING-19-05-13/"
-        "electricity-tariffs/E-1R-AGILE-OUTGOING-19-05-13-A/standard-unit-rates/"
+        "electricity-tariffs/E-1R-AGILE-OUTGOING-19-05-13-H/standard-unit-rates/"
     )
     response_import = requests.get(url_base + import_endpt).json()
     response_export = requests.get(url_base + export_endpt).json()
