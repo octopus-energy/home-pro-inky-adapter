@@ -8,6 +8,6 @@ Attach the hat to the 40-pin header on the Home pro. Load the project in the Hom
 
 
 ## Show the agile tariff as a line plot
-Run `python3 show_agile.py` to show the agile tariff as a line plot on the Inky pHAT. It just shows the previous 6 hours and following 12 hours of import and export tariff price including VAT for a location in England. The data is fetched from the Octopus Energy API. It currently just runs as a once off to show the capability, it doesn't update yet. It needs seaborn to run which can be installed with `pip install seaborn`.
+Run `python3 show_agile.py` to show the agile tariff as a line plot on the Inky pHAT. It shows the previous 6 hours and following 12 hours of import and export tariff price including VAT for a location in London. The data is fetched from Octopus Energy's REST API. It currently just runs as a once off in the devloper SDK as an demonstration of the Inky hat and it isn't a dockerised app yet. It uses the seaborn library for plotting which can be installed with `pip install seaborn`.
 
 ![Image of HomePro in the wild.](assets/Pro_agile_display.jpg)
