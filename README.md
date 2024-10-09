@@ -4,7 +4,7 @@ This allows you to use the display image functionality of the [Pimoroni Inky pHA
 
 
 ## Running in the home pro sdk
-Attach the hat to the 40-pin header on the Home pro. Load the project in the Home Pro SDK. To display an image, run the project with: `python3 image_display.py --file <filename>`. For example, to use the test image included here, use `python3 image_display.py --file images/test_image5-7.png`. To use the 7.3 inch display, use `python3 image_display.py --file images/test_image7-3.png --device Impression7-3`. To use the 4 inch display, use `python3 image_display.py --file images/test_image_4.png --device Impression4`.
+Attach the hat to the 40-pin header on the Home pro. Load the project in the Home Pro SDK. To display an image, run the project with: `python3 image_display.py --file <filename>`. For example, to use the test image included here, use `python3 image_display.py --file images/test_image_5-7.png`. To use the 7.3 inch display, use `python3 image_display.py --file images/test_image_7-3.png --device Impression7-3`. To use the 4 inch display, use `python3 image_display.py --file images/test_image_4.png --device Impression4`.
 
 
 ## Show the agile tariff as a line plot
