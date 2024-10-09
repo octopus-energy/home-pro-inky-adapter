@@ -2,6 +2,7 @@ import argparse
 import pathlib
 import sys
 from inky_drivers.inky_uc8159_mod import Inky as InkyUC8159
+from inky_drivers.inky_ac0735c1a_mod import Inky as Inky_AC0735c1a
 
 from PIL import Image
 
@@ -11,12 +12,26 @@ parser.add_argument(
     "--saturation", "-s", type=float, default=0.5, help="Colour palette saturation"
 )
 parser.add_argument("--file", "-f", type=pathlib.Path, help="Image file")
+parser.add_argument(
+    "--device",
+    "-d",
+    type=str,
+    default="Impression5-7",
+    help="Inky device to use, "
+    "e.g. Impression4, Impression7-3 or Impression5-7 (default)",
+)
 
-# inky = auto(ask_user=True, verbose=True)
-
-inky = InkyUC8159()
 
 args, _ = parser.parse_known_args()
+
+
+if args.device == "Impression4":
+    inky = InkyUC8159(device_type="Impression4")
+elif args.device == "Impression7-3":
+    inky = Inky_AC0735c1a()
+else:
+    inky = InkyUC8159(device_type="Impression5-7")
+
 
 saturation = args.saturation
 
