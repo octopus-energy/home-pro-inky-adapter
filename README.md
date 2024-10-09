@@ -1,10 +1,10 @@
 # home-pro-inky-adapter
 
-This allows you to use the display image functionality of the [Pimoroni Inky pHAT](https://shop.pimoroni.com/products/inky-phat) with the Home Pro. Currently it's set up to work with the 5.7" 7 color display. The gpiod libraries used in the Inky pHAT library are not available in the Home Pro SDK, so this project replaces gpiod functions with those of the Octace_GPIO api.
+This allows you to use the display image functionality of the [Pimoroni Inky pHAT](https://shop.pimoroni.com/products/inky-phat) with the Home Pro. Currently it's set up to work with the 5.7 inch 7 color display by default, but also can be used for the 7.3 inch and 4 inch versions. The gpiod libraries used in the Inky pHAT library are not available in the Home Pro SDK, so this project replaces gpiod functions with those of the Octace_GPIO api.
 
 
 ## Running in the home pro sdk
-Attach the hat to the 40-pin header on the Home pro. Load the project in the Home Pro SDK. To display an image, run the project with: `python3 image_display.py --file <filename>`. For example, to use the test image included here, use `python3 image_display.py --file images/test-image.png`.
+Attach the hat to the 40-pin header on the Home pro. Load the project in the Home Pro SDK. To display an image, run the project with: `python3 image_display.py --file <filename>`. For example, to use the test image included here, use `python3 image_display.py --file images/test_image5-7.png`. To use the 7.3 inch display, use `python3 image_display.py --file images/test_image7-3.png --device Impression7-3`. To use the 4 inch display, use `python3 image_display.py --file images/test_image_4.png --device Impression4`.
 
 
 ## Show the agile tariff as a line plot
